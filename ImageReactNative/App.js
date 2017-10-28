@@ -25,6 +25,12 @@ const instructions = Platform.select({
 
 var jsonData = require('./resource/Json/data.json');
 
+var Dimensions = require('Dimensions');
+var {width} = Dimensions.get('window');
+var col = 3;
+var ItemWidth = 100;
+var hMargin = (width - ItemWidth * col) / (col + 1);
+
 export default class App extends Component<{}> {
   render() {
     return (
@@ -49,7 +55,7 @@ export default class App extends Component<{}> {
           var data = jsonData.data[i];
           // 添加到数组中
           dataObjs.push(
-              <View style={styles.iconViewStyle}>
+              <View key={i} style={styles.iconViewStyle}>
                    <Image source={images[i]} style={styles.picStyle}/>
               <Text style={styles.nameStyle}>
                   {data.title}
@@ -67,20 +73,27 @@ const styles = StyleSheet.create({
       flex: 1,
       flexDirection:'row',
       backgroundColor: '#F5FCFF',
+      flexWrap:'wrap'
   },
     /* 单个视图样式 */
     iconViewStyle:{
-      backgroundColor:'#ff0000',
-      margin:10
+      backgroundColor:'#999999',
+     marginTop:30,
+        marginLeft:hMargin,
+      width:ItemWidth,
+      height:ItemWidth,
+      alignItems:'center'
     },
     /* 图片样式*/
     picStyle:{
-        width:100,
-        height:30
+        marginTop:3,
+        width:70,
+        height:70
 
     },
     /* 名称样式*/
     nameStyle:{
+        marginTop:7
 
     },
 
