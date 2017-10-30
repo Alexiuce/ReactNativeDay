@@ -9,8 +9,7 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View,
-    Image
+  View, Image
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -45,7 +44,7 @@ export  class App extends Component<{}> {
   }
 }
 /*=======================================================*/
-export  class App1 extends Component<{}> {
+export default class App1 extends Component<{}> {
     render() {
         return (
             <View style={styles.container}>
