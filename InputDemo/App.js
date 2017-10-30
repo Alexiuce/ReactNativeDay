@@ -9,7 +9,9 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  TextInput,
+
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -32,6 +34,18 @@ export default class App extends Component<{}> {
         <Text style={styles.instructions}>
           {instructions}
         </Text>
+          <TextInput style={styles.inputStyle}
+                     // 设置默认文字
+                     // value={"I am dev"}
+                     // 设置键盘类型
+                     //keyboardType={"number-pad"}
+
+                     // 设置多行
+                     multiline={true}
+                     // 占位文字
+                     placeholder={"please input in here"}
+          />
+
       </View>
     );
   }
@@ -54,4 +68,10 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+    inputStyle:{
+      width:300,
+        height:30,
+        borderWidth:1,
+        borderColor:'green'
+    },
 });
