@@ -34,6 +34,8 @@ export default class LoginView extends Component<{}> {
           <TextInput style={styles.inputStyle}
                      placeholder="密码"
           />
+          {/*登陆*/}
+          <Text>登陆</Text>
           {/* 设置*/}
           <View style={styles.settingViewStyle}>
             <Text>忘记密码</Text>
@@ -70,6 +72,13 @@ const styles = StyleSheet.create({
     borderColor:'green',
     alignSelf:'center',
     marginTop:5,
+  },
+  loginStyle:{
+    borderRadius: 5,
+    backgroundColor:"#00ffff",
+    height:40,
+    width:100,
+    alignSelf:'center'
   },
   settingViewStyle:{
     flexDirection:"row",
