@@ -37,13 +37,21 @@ export default class HomeView extends Component<{}> {
   render() {
     return (
         <View style={style.homeStyle}>
-        <ScrollView style={style.scrollStyle}
+          {/* scrollView*/}
+          <ScrollView style={style.scrollStyle}
+                    // 设置水平滚动
                     horizontal={true}
+                    // 隐藏水平指示器
                     showsHorizontalScrollIndicator={false}
+                    // 设置分页效果
                     pagingEnabled={true}
         >
           {this.setupUI()}
         </ScrollView>
+          {/* 圆点视图 */}
+          <View style={style.pageViewStyle}>
+
+          </View>
         </View>
     );
   }
@@ -51,12 +59,10 @@ export default class HomeView extends Component<{}> {
 
   setupUI() {
     var views = [];
-    var viewColors = ["red", "yellow", "green", "blue", "#007979"];
     var picRequirs = [require('./img/img_01.png'),require('./img/img_02.png'),require('./img/img_03.png'),require('./img/img_04.png'),require('./img/img_05.png')];
-    for (var i = 0; i < viewColors.length; i++) {
+    for (var i = 0; i < picRequirs.length; i++) {
       views.push(
-          <View key={i} style={[style.subViewStyle,{ backgroundColor:viewColors[i]}]}>
-            <Text>{"./img/img_0"+(i+1)+".png"}</Text>
+          <View key={i} style={[style.subViewStyle]}>
             <Image source={picRequirs[i]} style={style.imgStyle}/>
           </View>
       );
@@ -68,13 +74,12 @@ export default class HomeView extends Component<{}> {
 
 const style = StyleSheet.create({
   homeStyle:{
-    flex:1,
+    marginTop:64,
     backgroundColor:'gray',
   },
   scrollStyle:{
-   marginTop:64,
+   // marginTop:64,
    backgroundColor:'white',
-   // height:90,
   },
   subViewStyle:{
     width:ScreenWidth,
@@ -82,7 +87,14 @@ const style = StyleSheet.create({
   },
   imgStyle:{
     width:ScreenWidth,
-    height:120,
+    height:picHeight,
+  },
+  pageViewStyle:{
+    width:ScreenWidth,
+    height:20,
+    position:"absolute",
+    bottom:0,
+    backgroundColor:'rgba(0,0,0,0.3)',
   },
 
 });
