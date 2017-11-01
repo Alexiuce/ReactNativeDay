@@ -12,6 +12,8 @@ import {
   View,
   TextInput,
   Image,
+  TouchableOpacity,
+  Alert,
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -20,6 +22,9 @@ const instructions = Platform.select({
   android: 'Double tap R on your keyboard to reload,\n' +
   'Shake or press menu button for dev menu',
 });
+
+var Dimensions = require('Dimensions');
+var {width, height} = Dimensions.get('window')
 
 export default class LoginView extends Component<{}> {
   render() {
@@ -35,7 +40,11 @@ export default class LoginView extends Component<{}> {
                      placeholder="密码"
           />
           {/*登陆*/}
-          <Text>登陆</Text>
+          <TouchableOpacity activeOpacity={0.5} onPressIn={()=>this.clickLogin()}>
+          <View style={styles.loginStyle} >
+            <Text>登陆</Text>
+          </View>
+        </TouchableOpacity>
           {/* 设置*/}
           <View style={styles.settingViewStyle}>
             <Text>忘记密码</Text>
@@ -51,34 +60,43 @@ export default class LoginView extends Component<{}> {
         </View>
     );
   }
+
+  clickLogin(){
+    Alert.alert("title1","message1")
+  }
+
+
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#999999',
   },
   iconStyle:{
     marginTop:100,
+    marginBottom:30,
     width:60,
     height:60,
     alignSelf:'center',
     borderRadius:30,
   },
   inputStyle:{
-    width:300,
+    width:width,
     height:30,
-    borderWidth:1,
-    borderColor:'green',
-    alignSelf:'center',
-    marginTop:5,
+    backgroundColor:'white',
+    marginTop:1,
+    textAlign:"center"
   },
   loginStyle:{
+    marginTop:15,
+    marginLeft:15,
     borderRadius: 5,
     backgroundColor:"#00ffff",
     height:40,
-    width:100,
-    alignSelf:'center'
+    width:width - 30,
+    justifyContent:'center',
+    alignItems:'center',
   },
   settingViewStyle:{
     flexDirection:"row",
@@ -89,13 +107,18 @@ const styles = StyleSheet.create({
   },
   otherViewStyle:{
     flexDirection:'row',
-    alignItems:'center'
+    alignItems:'center',
+    position: "absolute",
+    bottom:30,
+    left:15,
 
   },
   otherImageStyle:{
     width: 40,
     height:40,
+    borderRadius:20,
     marginLeft:15,
+
   },
 });
 
