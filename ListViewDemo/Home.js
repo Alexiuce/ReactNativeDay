@@ -10,6 +10,7 @@ import {
   StyleSheet,
   Text,
   View,
+  Image,
   ListView
 } from 'react-native';
 
@@ -20,6 +21,9 @@ const instructions = Platform.select({
   'Shake or press menu button for dev menu',
 });
 
+const Dimensions = require('Dimensions');
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
 
 const  Wine = require('./Wine.json');
 
@@ -37,16 +41,28 @@ export default class Home extends Component<{}> {
 
   render() {
     return (
-        <View style={styles.container}>
-
           <ListView
+              style={{marginTop:20}}
               dataSource={this.state.dataSource}
-              renderRow={(rowData)=><Text>{rowData.name}</Text>}
+              renderRow={(rowData)=>this.cellForRow(rowData)}
           />
+    );
+  }
+
+
+  cellForRow(rowData){
+    return (
+        <View style={styles.cellStyle}>
+          <Image style={styles.leftPicStyle}/>
+           <View style={styles.rightViewStyle}>
+            <Text style={styles.nameStyle}>{rowData.name}</Text>
+             <Text>{rowData.money}</Text>
+           </View>
 
         </View>
     );
-  }
+
+}
 }
 
 const styles = StyleSheet.create({
@@ -56,19 +72,22 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  tableStyle:{
+  leftPicStyle: {
+    width:80,
+    height:80,
     backgroundColor:'red',
-    width:100,
-    height:100,
+  },
+  cellStyle: {
+    flexDirection:"row",
+    borderBottomWidth:0.5,
+    borderBottomColor:"#e8e8e8",
+  },
+  nameStyle:{
+    backgroundColor:'red',
+    width:SCREEN_WIDTH * 0.7,
+
+  },
+  rightViewStyle:{
+    padding:10,
   },
 });
