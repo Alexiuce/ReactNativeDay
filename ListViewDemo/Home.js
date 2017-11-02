@@ -11,7 +11,9 @@ import {
   Text,
   View,
   Image,
-  ListView
+  ListView,
+  TouchableOpacity,
+  Alert,
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -44,22 +46,24 @@ export default class Home extends Component<{}> {
           <ListView
               style={{marginTop:20}}
               dataSource={this.state.dataSource}
-              renderRow={(rowData)=>this.cellForRow(rowData)}
+              renderRow={this.cellForRow}
           />
     );
   }
 
 
-  cellForRow(rowData){
+  cellForRow(rowData,sectionID,rowID,rowHeight){
     return (
+        <TouchableOpacity activeOpacity={0.5} onPress={()=>{Alert.alert("点击了第"+ rowID+"行")}}>
         <View style={styles.cellStyle}>
           <Image style={styles.leftPicStyle}/>
            <View style={styles.rightViewStyle}>
             <Text style={styles.nameStyle}>{rowData.name}</Text>
-             <Text>{rowData.money}</Text>
+             <Text>{"$"+ rowData.money}</Text>
            </View>
 
         </View>
+        </TouchableOpacity>
     );
 
 }
@@ -83,8 +87,9 @@ const styles = StyleSheet.create({
     borderBottomColor:"#e8e8e8",
   },
   nameStyle:{
-    backgroundColor:'red',
+
     width:SCREEN_WIDTH * 0.7,
+    marginBottom:10,
 
   },
   rightViewStyle:{
