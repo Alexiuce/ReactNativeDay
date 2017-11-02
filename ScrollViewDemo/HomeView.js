@@ -34,6 +34,12 @@ export default class HomeView extends Component<{}> {
   // 注册定时器
   mixins: [TimerMixin]
 
+  // 初始化方法
+  constructor(props){
+   super(props);
+   this.state = {currentPage: 0};
+  }
+
   render() {
     return (
         <View style={style.homeStyle}>
@@ -74,8 +80,9 @@ export default class HomeView extends Component<{}> {
   setupPageCircleView(){
     var circleViews = [];
     for(var i = 0; i < 5; i++){
-      circleViews.push(
-          <View key={i} style={style.circleStyle}>
+      var circleColor = (i == this.state.currentPage)? "black":"white";
+          circleViews.push(
+          <View key={i} style={[style.circleStyle,{backgroundColor:circleColor}]}>
           </View>
       );
     }
@@ -114,7 +121,6 @@ const style = StyleSheet.create({
     width:8,
     height:8,
     borderRadius:4,
-    backgroundColor:'red',
     marginLeft:5,
   },
 
