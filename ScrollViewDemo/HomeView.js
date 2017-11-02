@@ -50,13 +50,13 @@ export default class HomeView extends Component<{}> {
         </ScrollView>
           {/* 圆点视图 */}
           <View style={style.pageViewStyle}>
-
+            {this.setupPageCircleView()}
           </View>
         </View>
     );
   }
 
-
+// 设置滚动子视图
   setupUI() {
     var views = [];
     var picRequirs = [require('./img/img_01.png'),require('./img/img_02.png'),require('./img/img_03.png'),require('./img/img_04.png'),require('./img/img_05.png')];
@@ -69,6 +69,17 @@ export default class HomeView extends Component<{}> {
     }
 
     return views;
+  }
+  // 设置圆点指示视图
+  setupPageCircleView(){
+    var circleViews = [];
+    for(var i = 0; i < 5; i++){
+      circleViews.push(
+          <View key={i} style={style.circleStyle}>
+          </View>
+      );
+    }
+    return circleViews;
   }
 }
 
@@ -95,6 +106,16 @@ const style = StyleSheet.create({
     position:"absolute",
     bottom:0,
     backgroundColor:'rgba(0,0,0,0.3)',
+    flexDirection:'row',
+    justifyContent:'center',
+    alignItems:'center',
+  },
+  circleStyle:{
+    width:8,
+    height:8,
+    borderRadius:4,
+    backgroundColor:'red',
+    marginLeft:5,
   },
 
 });
