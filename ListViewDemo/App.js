@@ -6,13 +6,14 @@
 
 import React, { Component } from 'react';
 
-import HomeView from "./Home"
+// import HomeView from "./Home"
 
+import NineGridView from "./NineGrid"
 
 export default class App extends Component<{}> {
   render() {
     return (
-     <HomeView/>
+     <NineGridView/>
     );
   }
 }
