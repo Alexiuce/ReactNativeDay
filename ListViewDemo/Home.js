@@ -67,6 +67,8 @@ export default class Home extends Component<{}> {
     );
 
 }
+
+
 }
 
 const styles = StyleSheet.create({

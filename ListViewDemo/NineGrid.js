@@ -7,6 +7,7 @@ import {
   Image,
   ListView,
   TouchableOpacity,
+  Alert,
 
 } from 'react-native'
 
@@ -56,9 +57,14 @@ export  default  class NineGrid extends Component<{}>{
 
   }
 
+
+
+
   configCell(rowData,sectionID,rowID){
     return(
-        <TouchableOpacity activeOpacity={0.5}>
+        <TouchableOpacity activeOpacity={0.5} onPress={()=>{
+          Alert.alert(rowData.title);
+        }}>
         <View style={style.cellViewStyle}>
           <Image source={SharePicture[rowID]} style={style.picStyle}/>
           <Text> {rowData.title} </Text>
@@ -67,7 +73,12 @@ export  default  class NineGrid extends Component<{}>{
     );
   }
 
+
+
+
+
 }
+
 
 const style = StyleSheet.create({
   contentViewStyle:{
