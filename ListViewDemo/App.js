@@ -8,12 +8,15 @@ import React, { Component } from 'react';
 
 // import HomeView from "./Home"
 
-import NineGridView from "./NineGrid"
+// import NineGridView from "./NineGrid"
+
+
+import SectionView from './Section'
 
 export default class App extends Component<{}> {
   render() {
     return (
-     <NineGridView/>
+     <SectionView/>
     );
   }
 }
