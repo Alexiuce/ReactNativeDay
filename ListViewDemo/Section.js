@@ -65,7 +65,7 @@ export  default class Section extends Component<{}>{
 
   rowForCell(rowData){
     return(
-        <View>
+        <View style={style.rowViewStyle}>
           <Image source={{uri: rowData.icon}} style={style.rowCellStyle}/>
           <Text>{rowData.name}</Text>
 
@@ -74,7 +74,7 @@ export  default class Section extends Component<{}>{
   }
   sectionForView(sectionData,sectionID){
     return(
-        <View>
+        <View style={style.sectionSytle}>
           <Text>{sectionData}</Text>
         </View>
     )
@@ -114,18 +114,29 @@ const  style = StyleSheet.create({
   navBartyle:{
     marginTop:20,
     height:44,
-    backgroundColor:'#3c8900',
+    backgroundColor:'#7fffd4',
     justifyContent:'center',
     alignItems:'center',
   },
   navTitleStyle:{
-    backgroundColor:'red',
+    color:'white',
   },
-    textViewStyle:{
+  sectionSytle:{
+    backgroundColor:'gray',
+  },
+  rowViewStyle:{
+    flexDirection:'row',
+    alignItems:'center',
+    padding:10,
+    borderBottomWidth:0.5,
+    borderBottomColor:'#3c3c3c',
+  },
+  textViewStyle:{
       marginTop:20,
     },
   rowCellStyle:{
       width:50,
     height:50,
+    marginRight: 15,
   },
 });
