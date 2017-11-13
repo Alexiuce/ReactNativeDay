@@ -6,6 +6,7 @@ import {
   Platform,
   TabBarIOS,
   StyleSheet,
+  NavigatorIOS,
 } from 'react-native'
 
 const instructions = Platform.select({
