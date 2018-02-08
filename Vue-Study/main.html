@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+
+</head>
+<body>
+
+   <div id="app">
+       <p>{{message}}</p>
+
+
+       <input v-model="message">
+
+       <ul>
+           <li v-for="item in itemArray">
+               {{item.name}}
+           </li>
+       </ul>
+       <button v-on:click="clickButton">add go</button>
+    </div>
+
+   <script src="main.js"></script>
+
+   <div id="app1">
+       <runoob></runoob>
+   </div>
+</body>
+</html>
