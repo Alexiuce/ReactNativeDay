@@ -2,7 +2,7 @@
 
 /*注册组件*/
 Vue.component('vuediv',{
-  template:'<p></p>'
+  template:'<p>heh ....heh</p>'
 })
 
 // 注册
@@ -10,7 +10,10 @@ Vue.component('my-component', {
   template: '<div>A custom component!</div>'
 })
 
-
+// 注册
+Vue.component('runoob', {
+  template: '<h1>自定义组件!</h1>'
+})
 
 new Vue({
 
@@ -32,12 +35,4 @@ new Vue({
     }
   })
 
-// 注册
-Vue.component('runoob', {
-  template: '<h1>自定义组件!</h1>'
-})
-// 创建根实例
-new Vue({
-  el: '#app1'
-})
 
