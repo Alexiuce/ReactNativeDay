@@ -1,12 +1,24 @@
 <template>
   <div id="app">
-    <router-view/>
+
+    <sahead></sahead>
+    <div class="tab">
+      i am tab
+    </div>
+
+    <div class="content">
+      i am content
+    </div>
   </div>
 </template>
 
 <script>
+import headview from './components/Header/SAHead.vue'
+
 export default {
-  name: 'App'
+  components: {
+    sahead: headview
+  }
 }
 </script>
 
