@@ -1,6 +1,6 @@
-# hello-vue-project
+# saas-app
 
-> this is hello Vue.js project
+> this is a saas app demo 
 
 ## Build Setup
 
