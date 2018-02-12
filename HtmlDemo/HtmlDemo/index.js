@@ -1,6 +1,8 @@
 console.log("hello");
 document.write('<h1>this is h1 text</h1>')
 
+
+
 var index = 1
 function clickSubmit() {
   index++
@@ -10,7 +12,29 @@ function clickSubmit() {
 }
 
 var time
-window.onload = function () {
+
+/* JQuery 页面加载方法 */
+$(function () {
+  document.getElementById('jsf').onclick = function () {
+    document.getElementsByTagName('h1')[0].innerHTML = 'js code modify h1'
+  }
+
+  $('#jqf').click(function () {
+    $('h1').html("jquery modify h1")
+  })
+})
+
+/* JS 页面加载方法*/
+// window.onload = function () {
+//
+// }
+
+
+/*JQuery 方法*/
+
+
+/* js */
+function jsStart() {
   setInterval(clickSubmit,1000)
   time = setInterval(showAd,3000)
 
@@ -18,18 +42,21 @@ window.onload = function () {
 }
 
 
+
+
+/* 显示定时广告图片 */
 function showAd() {
   setAdImageDisplay(true)
   clearInterval(time)
   time = setInterval(hidenAd,3000)
 }
-
+/* 隐藏定时广告图片*/
 function hidenAd() {
   setAdImageDisplay(false)
   clearInterval(time)
   time = setInterval(showAd,3000)
 }
-
+/* 设置图片显示或因此*/
 function setAdImageDisplay(show) {
   var adImage = document.getElementById('adImageView')
   if (show == true){
@@ -38,7 +65,7 @@ function setAdImageDisplay(show) {
     adImage.style.display = 'none'
   }
 }
-
+/* 设置表格*/
 function setTabRow() {
 
   var table = document.getElementById('mytable')
@@ -52,3 +79,8 @@ function setTabRow() {
     }
   }
 }
+/*
+document.createTextNode() : 创建文本节点
+document.createElement(param)  : 创建元素节点
+param: 'p','div','li' .....
+* */
