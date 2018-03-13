@@ -2,13 +2,14 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 
-import GoodView from '../components/goods/Goods.vue'
-import SellerView from '../components/seller/Seller.vue'
-import RatingsView from '../components/ratings/Ratings.vue'
+import GoodView from '@/components/goods/Goods.vue'
+import SellerView from '@/components/seller/Seller.vue'
+import RatingsView from '@/components/ratings/Ratings.vue'
 
 Vue.use(Router)
 
 export default new Router({
+  linkActiveClass: "active",
   routes: [
     {
       path: '/',
