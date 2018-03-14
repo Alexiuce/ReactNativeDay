@@ -3,7 +3,7 @@
     <div class="home">
 
       <!--头部视图-->
-      <header-view></header-view>
+      <header-view :seller="seller"></header-view>
 
       <!--列表视图-->
       <div class="tab">
@@ -45,7 +45,6 @@
 
           if (response.errorCode == ERROR_OK){
             this.seller= response.data
-
           }
       })
     },
@@ -59,13 +58,11 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style >
 
-
-
  .tab {
      display: flex;
      width: 100%;
      height: 40px;
-     line-height: 40px;
+     align-items: center;
      border-bottom: 1px solid rgba(7,17,27,0.1);
  }
   .tab-item {
