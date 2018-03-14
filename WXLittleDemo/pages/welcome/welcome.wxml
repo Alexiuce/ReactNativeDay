@@ -1,6 +1,6 @@
 <view class='container'>
    <image class='user-icon' src='/images/timg.jpeg'></image> 
-    <div>helo</div>
+    
     <text class='user-name'>
         <text class='hello' >Hello</text> alex
     </text>
