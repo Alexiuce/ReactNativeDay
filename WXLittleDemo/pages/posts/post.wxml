@@ -1,8 +1,25 @@
 <view>
+  <!-- 轮播图  -->
   <swiper indicator-dots="true" autoplay="true" interval="3000" circular="true">
    <swiper-item><image src='/images/wx.png'></image></swiper-item>
    <swiper-item><image src='/images/vr.png'></image></swiper-item>
    <swiper-item><image src='/images/iqiyi.png'></image></swiper-item>
-   
   </swiper>
+  <!-- 列表图 -->
+  <view>
+     <view>
+        <image src='/images/avatar/1.png'></image>
+        <text>Nov 25 2017</text>
+     </view>
+     <text>究天人之际,通古今之变,成一家之言</text>
+     <image src='/images/post/cat.png'></image>
+     <text></text>
+     <view>
+        <image></image>
+        <text></text>
+        <image></image>
+        <text></text>
+     </view>
+  </view>
+
 </view>
