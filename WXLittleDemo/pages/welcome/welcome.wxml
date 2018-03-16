@@ -1,10 +1,10 @@
 <view class='container'>
-   <image class='user-icon' src='/images/timg.jpeg'></image> 
+   <image class='user-icon' src='/images/avatar/3.png'></image> 
     
     <text class='user-name'>
         <text class='hello' >Hello</text> alex
     </text>
-  <view class='moto-container'>
-    <text class='moto'>Start App</text>
+  <view class='moto-container' bindtap='onTap'>
+    <text class='moto' catchtap='onTextTap'>Start App</text>
   </view>
 </view>

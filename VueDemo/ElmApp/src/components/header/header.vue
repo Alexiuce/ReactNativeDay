@@ -172,9 +172,8 @@ export default {
   font-size: 14px;
   padding :0 100px 0 12px;
 
-  white-space nowrap
-  overflow hidden;
-  text-overflow ellipsis
+  overflow: hidden;
+  text-overflow: ellipsis
   }
 
 .bulletin-text{

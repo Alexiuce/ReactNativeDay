@@ -1,0 +1,65 @@
+span{
+    font-size: 100px;
+}
+
+.g{
+    /*font-weight: normal;*/
+    color: blue;
+}
+.orange{
+    color: orange;
+}
+.red{
+    color: red;
+}
+.l{
+    color: green;
+}
+
+
+/*伪类选择器   :  链接伪类选择器*/
+
+a:link{  /* 未访问的链接*/
+    color: orange;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+a:visited{/* 访问的链接*/
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+}
+a:hover{
+    color: pink;
+    font-size: 26px;
+    font-weight: 700;
+}
+a:active{
+    color: aqua;
+}
+
+/*伪类选择器: 位置伪类选择器*/
+/*li:first-child{  !*选择第一个*!*/
+    /*color: red;*/
+/*}*/
+/*li:last-child{   !*选择最后一个*!*/
+    /*color: aqua;*/
+/*}*/
+/*li:nth-child(5){  !*选择指定位置的*!*/
+    /*color: orange;*/
+/*}*/
+/*li:nth-child(odd){ !* 选择奇数位置*!*/
+    /*color: orange;*/
+/*}*/
+/*li:nth-child(even){  !*选择偶数位置*!*/
+    /*color: green;*/
+/*}*/
+
+li:nth-last-child(3){  /*从最后位置开始选择指定位置*/
+    color: red;
+}
+
+:target{  /*当前选择的位置*/
+    color: green;
+}
