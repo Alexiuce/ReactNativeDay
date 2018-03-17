@@ -1,0 +1,28 @@
+<view class='post-view'>
+  <!-- 轮播图  -->
+  <swiper indicator-dots="true" autoplay="true" interval="3000" circular="true">
+   <swiper-item><image src='/images/wx.png'></image></swiper-item>
+   <swiper-item><image src='/images/vr.png'></image></swiper-item>
+   <swiper-item><image src='/images/iqiyi.png'></image></swiper-item>
+  </swiper>
+  <!-- 列表图 -->
+
+	<block wx:for="{{listArray}}" wx:key="content-cell">
+			<view class='post-content'>
+				<view class='post-header'>
+						<image src='{{item.image}}'></image>
+						<text>{{item.date}}</text>
+				</view>
+				<text class='post-title'>{{item.title}}</text>
+				<image class='post-image' src='{{item.contentImage}}'></image>
+				<text class='post-text'>{{item.contentText}}　</text>
+				<view class='post-footer'>
+						<image src='/images/icon/chat.png'></image>
+						<text>{{item.startCount}}</text>
+						<image src='/images/icon/chat1.png'></image>
+						<text>{{item.chatCount}}</text>
+				</view>
+			</view>
+   </block>
+
+</view>

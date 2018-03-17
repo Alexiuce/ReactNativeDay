@@ -1,0 +1,18 @@
+
+
+.nav, .sitenav {
+    font-size: 14px;
+    font-family: "Toppan Bunkyu Midashi Mincho";
+}
+
+.nav > ul > li > a{
+    color: aquamarine;
+}
+.nav a{
+    color: deepskyblue;
+}
+
+
+.sitenav a{
+    color: red;
+}
