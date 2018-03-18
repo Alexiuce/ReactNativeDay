@@ -1,0 +1,14 @@
+body {
+    color: #000;
+}
+
+a {
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    color: #fff;
+    background-color: orange;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+}
