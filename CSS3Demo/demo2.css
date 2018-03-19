@@ -1,0 +1,9 @@
+
+
+div[class ^='font']{
+    color: red;
+}
+div[class$='footer']{
+    color: blueviolet;
+
+}
