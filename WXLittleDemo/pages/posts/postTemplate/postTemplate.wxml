@@ -1,0 +1,19 @@
+<template name="post-item">
+ 
+  <view class='post-content'>
+    <view class='post-header'>
+      <image src='{{image}}'></image>
+      <text>{{date}}</text>
+    </view>
+    <text class='post-title'>{{title}}</text>
+    <image class='post-image' src='{{contentImage}}'></image>
+    <text class='post-text'>{{contentText}}　</text>
+    <view class='post-footer'>
+      <image src='/images/icon/chat.png'></image>
+      <text>{{item.startCount}}</text>
+      <image src='/images/icon/chat1.png'></image>
+      <text>{{item.chatCount}}</text>
+    </view>
+  </view>
+
+</template>
