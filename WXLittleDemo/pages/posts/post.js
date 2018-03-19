@@ -62,5 +62,12 @@ Page({
    */
 	onShareAppMessage: function () {
 
+	},
+	/** 自定义事件 */
+	onPostTap: function (event) {
+		console.log(event)
+		wx.navigateTo({
+			url: '../post-detail/post-detail',
+		})
 	}
 })
