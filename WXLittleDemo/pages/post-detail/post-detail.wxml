@@ -1,2 +1,26 @@
 <!--pages/post-detail/post-detail.wxml-->
-<text>this is the post detail page </text>
+<view class='container'>
+  <image class='headerImage' src='/images/post/crab.png'></image>
+  <image class='music-play' src='/images/music/music-start.png'></image>
+  <view class='userInfo'>
+    <image src='/images/avatar/2.png'></image>
+    <text class='userName'>林小白</text>
+    <text class='userPusblish'>发表于</text>
+    <text class='userTime'>2016年3月3日</text>
+  </view>
+  <text class='title'>Title</text>
+
+  <view class='toolView'>
+    <view class='circleItem'>
+      <image src='/images/icon/collection.png'></image>
+      <image class='shareImage' src='/images/icon/share.png'></image>
+    </view>
+    <view class='horizonLine'>
+    </view>
+  </view>
+
+
+  <text class='content'>人人都恨验证码——那些恼人的图片，显示着你在登陆某网站前得输入的文本。设计验证码的目的是，通过验证你是真实的人来避免电脑自动填充表格。但是随着深度学习和计算机视觉的兴起，现在验证码常常易被攻破</text>
+
+
+</view>
