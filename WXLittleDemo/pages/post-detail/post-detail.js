@@ -13,6 +13,7 @@ Page({
    */
   onLoad: function (options) {
   
+		wx.setStorageSync("myName", "Jumengji")
   },
 
   /**
@@ -62,5 +63,9 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+	onTapFavorite: function(event) {
+		let name =	wx.getStorageSync("myName")
+		console.log(name)
+	}
 })

@@ -12,7 +12,7 @@
 
   <view class='toolView'>
     <view class='circleItem'>
-      <image src='/images/icon/collection.png'></image>
+      <image catchtap='onTapFavorite' src='/images/icon/collection.png'></image>
       <image class='shareImage' src='/images/icon/share.png'></image>
     </view>
     <view class='horizonLine'>
