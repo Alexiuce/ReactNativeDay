@@ -42,7 +42,6 @@
 
       this.$http.get('/api/seller').then((response) => {
           response = response.body
-
           if (response.errorCode == ERROR_OK){
             this.seller= response.data
           }

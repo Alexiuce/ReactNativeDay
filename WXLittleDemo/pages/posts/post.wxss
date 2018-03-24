@@ -1,3 +1,5 @@
+@import "postTemplate/postTemplate.wxss"; 
+
 page {
   background-color: #ededed;
 }
@@ -6,64 +8,5 @@ swiper{
   height: 500rpx;
 }
 
-.post-content{
-  display: flex;
-  flex-direction: column;
-  margin-top: 20rpx;
-  margin-bottom: 40rpx;
-  background-color: #fff;
-  border-bottom: 1px solid #ededed;
-  border-top: 1px solid #ededed;
-  padding-bottom: 5px;
-}
 
-.post-header{
-  margin: 10rpx 0rpx 20rpx 10rpx;
-}
-.post-header image{
-  width: 60rpx;
-  height: 60rpx;
-  vertical-align: middle
-}
-.post-header text{
-  margin-left: 20rpx;
-  margin-top: 5rpx;
-  vertical-align: middle;
-  font-size: 26rpx;
-}
-.post-title{
-  font-size: 34rpx;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 10px;
-  margin-left: 10px;
-}
-.post-image{
-  height: 340rpx;
-  margin-bottom: 15px;
-}
-.post-text{
-  color: #666;
-  font-size: 28rpx;
-  margin-bottom: 20rpx;
-  margin-left: 20rpx;
-  letter-spacing: 2rpx;
-  line-height: 40rpx;
-}
-.post-footer{
-  flex-direction: row;
-  font-size: 13px;
-  line-height: 16px;
-  margin-left: 10px;
-  color: #666;
-}
-.post-footer image{
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
-  vertical-align: middle;
-}
-.post-footer text{
-  vertical-align: middle;
-  margin-right: 20px;
-}
+
