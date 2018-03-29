@@ -13,7 +13,9 @@ Page({
    */
   onLoad: function (options) {
   
-		wx.setStorageSync("myName", "Jumengji")
+		wx.setStorageSync("myName", "Jumenji")
+
+
   },
 
   /**
@@ -67,5 +69,13 @@ Page({
 	onTapFavorite: function(event) {
 		let name =	wx.getStorageSync("myName")
 		console.log(name)
+		wx.showModal({
+			title: '收藏',
+			content: '是否取消?',
+		})
+		
+	},
+	onTapShare: function (event){
+		wx.clearStorage()
 	}
 })
