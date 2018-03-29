@@ -1,7 +1,7 @@
 <!--pages/post-detail/post-detail.wxml-->
 <view class='container'>
   <image class='headerImage' src='/images/post/crab.png'></image>
-  <image class='music-play' src='/images/music/music-start.png'></image>
+  <image class='music-play' src='/images/music/music-start.png' catchtap='onPlayMusicTap'></image>
   <view class='userInfo'>
     <image src='/images/avatar/2.png'></image>
     <text class='userName'>林小白</text>

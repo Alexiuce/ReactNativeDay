@@ -68,6 +68,7 @@ Page({
   },
 	onTapFavorite: function(event) {
 		let name =	wx.getStorageSync("myName")
+		
 		console.log(name)
 		wx.showModal({
 			title: '收藏',
@@ -77,5 +78,8 @@ Page({
 	},
 	onTapShare: function (event){
 		wx.clearStorage()
+	},
+	onPlayMusicTap: function () {
+		console.log("music")
 	}
 })
